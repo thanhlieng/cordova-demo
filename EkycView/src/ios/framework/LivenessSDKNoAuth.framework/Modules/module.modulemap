@@ -1,0 +1,6 @@
+framework module LivenessSDKNoAuth {
+  umbrella header "LivenessSDKNoAuth.h"
+  export *
+
+  module * { export * }
+}
