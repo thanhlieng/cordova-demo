@@ -1,0 +1,37 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.ekyc.sdk"
+        version="1.0.0">
+    <name>EkycViewPlugin</name>
+    <description>Cordova Plugin with Custom View</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, custom, view</keywords>
+    <js-module src="www/EkycViewPlugin.js" name="EkycViewPlugin">
+        <clobbers target="EkycViewPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="EkycViewPlugin">
+                <param name="android-package" value="com.ekyc.sdk.EkycViewPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/EkycViewPlugin.java" target-dir="src/com/ekyc/sdk"/>
+        <lib-file src="src/android/libs/sdk.aar" />
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
+    </platform>
+    <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+            <feature name="EkycViewPlugin">
+                <param name="ios-package" value="EkycViewPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/EkycViewPlugin.swift" />
+        <framework src="src/ios/framework/LivenessSDKNoAuth.framework" custom="true" />
+        <podspec>
+            <pods use-frameworks="true">
+                <pod name="MLKitFaceDetection" spec="5.0.0"/>
+                <!-- Add other dependencies as needed -->
+            </pods>
+        </podspec>
+        <header-file src="src/ios/Bridging-Header.h" />
+    </platform>
+</plugin>

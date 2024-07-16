@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-ekyc",
+  "version": "1.0.0",
+  "description": "Cordova Plugin with eKYC View",
+  "cordova": {
+    "id": "com.ekyc.sdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "custom",
+    "view"
+  ],
+  "author": "Your Name",
+  "license": "Apache-2.0"
+}

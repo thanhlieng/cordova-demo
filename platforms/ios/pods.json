@@ -1,0 +1,16 @@
+{
+    "declarations": {
+        "use_frameworks!": {
+            "declaration": "use_frameworks!",
+            "count": 15
+        }
+    },
+    "sources": {},
+    "libraries": {
+        "MLKitFaceDetection": {
+            "name": "MLKitFaceDetection",
+            "spec": "1.1.0",
+            "count": 15
+        }
+    }
+}

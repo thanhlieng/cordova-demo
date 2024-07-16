@@ -1,0 +1,39 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"EkycViewPlugin\"><param name=\"ios-package\" value=\"EkycViewPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "com.ekyc.sdk": {
+      "PACKAGE_NAME": "com.example.hello"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "com.ekyc.sdk.EkycViewPlugin",
+      "file": "plugins/com.ekyc.sdk/www/EkycViewPlugin.js",
+      "pluginId": "com.ekyc.sdk",
+      "clobbers": [
+        "EkycViewPlugin"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "com.ekyc.sdk": "1.0.0"
+  }
+}
