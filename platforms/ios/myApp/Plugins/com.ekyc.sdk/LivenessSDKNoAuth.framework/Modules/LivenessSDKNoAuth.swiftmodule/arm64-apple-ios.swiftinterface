@@ -1,0 +1,77 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name LivenessSDKNoAuth
+import AVFoundation
+import CommonCrypto
+import CoreVideo
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+@_exported import LivenessSDKNoAuth
+import MLKitFaceDetection
+import MLKitVision
+import Swift
+import SwiftUI
+import UIKit
+import UniformTypeIdentifiers
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ResultCode : Swift.Int {
+  case ok
+  case errorConfig
+  case errorVerify
+  case errorRuntimeAI
+  case errorTimeout
+  case errorMany
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum StepCode : Swift.Int {
+  case normal = 0
+  case moveLeft = 1
+  case moveRight = 2
+  case moveUp = 3
+  case moveDown = 4
+  case blink = 5
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias ResultCompletion = (_ livenessStep: Swift.String, _ stepStatus: Swift.String, _ resultCode: Swift.Int, _ filePath: Swift.String) -> Swift.Void
+@_inheritsConvenienceInitializers @objc public class LivenessMas : ObjectiveC.NSObject {
+  @objc public static let shared: LivenessSDKNoAuth.LivenessMas
+  @objc public var completion: LivenessSDKNoAuth.ResultCompletion?
+  @objc public var colorString: Swift.String?
+  @objc public var normalString: Swift.String?
+  @objc public var faceUpString: Swift.String?
+  @objc public var faceDownString: Swift.String?
+  @objc public var faceLeftString: Swift.String?
+  @objc public var faceRightString: Swift.String?
+  @objc public var blinkString: Swift.String?
+  @objc public var initString: Swift.String?
+  @objc public var urlConfig: Swift.String?
+  @objc public var sessionToken: Swift.String?
+  @objc public var stepActions: [Swift.Int]?
+  @objc override dynamic public init()
+  @objc public func openSDKin() -> UIKit.UIViewController
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UIUtilities {
+  public static func imageOrientation(fromDevicePosition devicePosition: AVFoundation.AVCaptureDevice.Position = .front) -> UIKit.UIImage.Orientation
+  public static func getStringAvailable(string1: Swift.String?, string2: Swift.String) -> Swift.String
+  public static func createUIImage(from imageBuffer: CoreVideo.CVImageBuffer, orientation: UIKit.UIImage.Orientation) -> UIKit.UIImage?
+  public static func createImageBuffer(from image: UIKit.UIImage) -> CoreVideo.CVImageBuffer?
+  @objc deinit
+}
+extension LivenessSDKNoAuth.ResultCode : Swift.Equatable {}
+extension LivenessSDKNoAuth.ResultCode : Swift.Hashable {}
+extension LivenessSDKNoAuth.ResultCode : Swift.RawRepresentable {}
+extension LivenessSDKNoAuth.StepCode : Swift.Equatable {}
+extension LivenessSDKNoAuth.StepCode : Swift.Hashable {}
+extension LivenessSDKNoAuth.StepCode : Swift.RawRepresentable {}

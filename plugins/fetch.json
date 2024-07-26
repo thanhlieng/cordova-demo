@@ -1,0 +1,10 @@
+{
+  "com.ekyc.sdk": {
+    "source": {
+      "type": "local",
+      "path": "/Users/anhchuongmascom/Desktop/myApp/node_modules/cordova-plugin-ekyc"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

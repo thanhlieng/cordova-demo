@@ -1,0 +1,11 @@
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation(name: 'sdk', ext: 'aar')
+    implementation 'com.google.mlkit:face-detection:16.1.6'
+    implementation 'com.google.android.material:material:1.4.0'
+}
